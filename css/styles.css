@@ -348,6 +348,111 @@ a {
     gap: 30px;
 }
 
+/* Certifications Section */
+.certifications {
+    background-color: var(--medium-bg);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+.certification-badge {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    min-height: 160px;
+    display: flex; /* Ensure content fills the badge */
+}
+
+.certification-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.certification-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, var(--card-bg), var(--dark-bg));
+    padding: 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.certification-link:hover {
+    background: linear-gradient(145deg, var(--primary-color) 0%, var(--card-bg) 100%);
+}
+
+.badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(77, 138, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.certification-badge:hover .badge-icon {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.badge-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.certification-badge:hover .badge-icon i {
+    color: white;
+}
+
+.badge-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.badge-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--light-text);
+    transition: all 0.3s ease;
+    line-height: 1.3;
+    /* Allow titles to wrap naturally */
+    white-space: normal;
+}
+
+.certification-badge:hover .badge-title {
+    color: var(--accent-color);
+}
+
+.badge-description {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    line-height: 1.4;
+    /* Allow text to flow naturally */
+    overflow: visible;
+}
+
+.certification-badge:hover .badge-description {
+    color: var(--light-text);
+}
+
 .project-card {
     background-color: var(--card-bg);
     border-radius: 10px;
